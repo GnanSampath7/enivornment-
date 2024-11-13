@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Environmental Conservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Environmental Conservation Quiz</h1>
+        <p>Drag and drop the items to the correct recycling bin!</p>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <div class="item" id="plastic" draggable="true" ondragstart="drag(event)">Plastic Bottle</div>
+            <div class="item" id="paper" draggable="true" ondragstart="drag(event)">Paper</div>
+            <div class="item" id="banana" draggable="true" ondragstart="drag(event)">Banana Peel</div>
+            <div class="item" id="glass" draggable="true" ondragstart="drag(event)">Glass Bottle</div>
+            <div class="item" id="can" draggable="true" ondragstart="drag(event)">Aluminum Can</div>
+
+            <div class="bin" id="recycle-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Recycling Bin</h3>
+            </div>
+            <div class="bin" id="compost-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Compost Bin</h3>
+            </div>
+            <div class="bin" id="trash-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Trash Bin</h3>
+            </div>
+        </div>
+
+        <button onclick="checkScore()">Submit</button>
+    </main>
+    
+    <footer>
+        <p>Created by Your Name</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
